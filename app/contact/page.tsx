@@ -5,10 +5,9 @@ import type React from "react"
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
+import Input from '@/components/ui/input.tsx'
 
 import { useToast } from "@/hooks/use-toast"
-import Input from "@/components/ui/Input" // Adjust the path based on your project structure
-
 export default function ContactPage() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({
