@@ -32,7 +32,7 @@ const skillCategories = [
     imagePrompt: "Glowing React logo in glass card, soft neon blue",
   },
   {
-    title: "Backend & Database",
+    title: "Backend & Database (Currently Started)",
     icon: "🟩",
     color: "var(--neon-green)",
     skills: ["Node.js & Express.js", "REST APIs", "MongoDB + Mongoose", "Postman for API testing"],
