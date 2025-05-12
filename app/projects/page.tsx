@@ -9,47 +9,46 @@ import SkillsMarquee from "@/components/SkillsMarquee"
 // Project data
 const projects = [
   {
-    title: "Neural Interface",
+    title: "Currency Converter",
     description:
-      "A cutting-edge neural network visualization platform that allows data scientists to see their AI models in action. Features real-time data processing, interactive node manipulation, and export capabilities for presentations.",
-    image: "/placeholder.svg?height=400&width=800",
+      "A responsive web app that allows users to convert between 150+ currencies in real-time using exchange rate APIs. Features historical data, dark mode, and offline support.",
+    image: "/images/currency-converter.png",
     color: "var(--neon-blue)",
-    tags: ["React", "WebGL", "Three.js", "TensorFlow.js"],
+    tags: ["react", "CSS", "JavaScript", "ExchangeRate API"],
   },
   {
-    title: "Quantum Dashboard",
+    title: "Wordle Clone",
     description:
-      "An advanced analytics platform with holographic data visualization and real-time metrics. This dashboard integrates multiple data sources and presents them in an intuitive 3D interface.",
-    image: "/placeholder.svg?height=400&width=800",
-    color: "var(--neon-purple)",
-    tags: ["Vue.js", "D3.js", "GraphQL", "Firebase"],
-  },
-  {
-    title: "Neon Pulse",
-    description:
-      "A reactive multimedia experience that responds to user movement and sound. This immersive installation uses computer vision to track participants and generate personalized visual and audio elements.",
-    image: "/placeholder.svg?height=400&width=800",
-    color: "var(--neon-pink)",
-    tags: ["TensorFlow.js", "WebAudio API", "Canvas", "React"],
-  },
-  {
-    title: "Synth World",
-    description:
-      "A WebGL-powered virtual environment with procedurally generated landscapes and interactive elements. This experimental project combines advanced shader techniques with spatial audio to create surreal digital worlds.",
-    image: "/placeholder.svg?height=400&width=800",
+      "A fun, browser-based Wordle clone built with React. Users can guess 5-letter words with daily puzzles, animations, and keyboard feedback.",
+    image: "/images/wordle-clone.png",
     color: "var(--neon-green)",
-    tags: ["WebGL", "Three.js", "GLSL Shaders", "Tone.js"],
+    tags: ["React", "JavaScript", "CSS Animations", "Game Logic"],
   },
   {
-    title: "Cyber Portal",
+    title: "Resume Builder",
     description:
-      "An AR portal experience that blends digital and physical worlds using cutting-edge web technologies. This browser-based application uses device cameras to identify surfaces and project virtual doorways to fantastical environments.",
-    image: "/placeholder.svg?height=400&width=800",
-    color: "var(--neon-blue)",
-    tags: ["WebXR", "AR.js", "Three.js", "TensorFlow.js"],
+      "A customizable resume builder that generates professional resumes with live previews. Supports multiple themes, section reordering, and PDF export.",
+    image: "/images/resume-builder.png",
+    color: "var(--neon-purple)",
+    tags: ["JavaScript", "Tailwind CSS", "HTML to PDF", "Form Validation"],
   },
-]
-
+  {
+    title: "Blockchain Learning Platform",
+    description:
+      "An interactive learning platform that teaches blockchain concepts in simple terms. Includes lessons, quizzes, and Web3 project walkthroughs.",
+    image: "/images/blockchain-platform.png",
+    color: "var(--neon-orange)",
+    tags: ["Next.js", "Tailwind CSS", "Web3.js", "Markdown"],
+  },
+  {
+    title: "World Atlas",
+    description:
+      "A data-driven world atlas app with interactive maps, country info, and stats. Uses REST APIs to fetch real-time population, GDP, and weather data.",
+    image: "/images/world-atlas.png",
+    color: "var(--neon-cyan)",
+    tags: ["React", "Leaflet.js", "REST API", "OpenWeatherMap"],
+  },
+];
 
 export default function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -59,6 +58,7 @@ export default function ProjectsPage() {
   const router = useRouter()
 
   useEffect(() => {
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
         goToNextProject()
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
     setTimeout(() => {
       setCurrentIndex(index)
       setIsFlipping(false)
-    }, 100)
+    }, 100) // Match this with animation duration
   }
 
   const goToNextProject = () => {
@@ -327,7 +327,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Keyboard instructions */}
-            <div className="mt-4 text-center text-white/50 text-sm">Use arrow keys or swipe to navigate projects</div>
+            <div className="m-4 text-center text-white/20 text-sm">Use arrow keys or swipe to navigate projects</div>
             <motion.button
               whileHover={{
                 scale: 1.05,

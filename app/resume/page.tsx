@@ -87,19 +87,25 @@ export default function ResumePage() {
 
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/pranjal-singh-0b3799315" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="text-white/70 hover:text-neon-blue transition-colors duration-200 flex items-center gap-1"
                   >
-                    <ExternalLink  className="w-4 h-4" /> LinkedIn
+                    <ExternalLink className="w-4 h-4" /> LinkedIn
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/pranjalsingh001" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white/70 hover:text-neon-purple transition-colors duration-200 flex items-center gap-1"
                   >
                     <ExternalLink className="w-4 h-4" /> GitHub
                   </a>
                   <a
-                    href="#"
+                    href="/" 
+                    target=""
+                    rel="noopener noreferrer"
                     className="text-white/70 hover:text-neon-pink transition-colors duration-200 flex items-center gap-1"
                   >
                     <ExternalLink className="w-4 h-4" /> Portfolio
@@ -119,40 +125,41 @@ export default function ResumePage() {
           >
             <div className="space-y-8">
               <ExperienceItem
+                title="Fullstack Developer (Self-Initiated Projects)"
+                company="Personal Portfolio & Resume Builder"
+                period="2024 - Present"
+                description="Built personal portfolio and resume builder apps using HTML, CSS (Bootstrap), JavaScript, and React. Focused on responsive UI, animation, and real-time DOM updates."
+                achievements={[
+                  "Created a modern animated personal portfolio with glowing shapes, navbar, and 3D effects",
+                  "Built a dynamic resume builder with form inputs, real-time preview, and export options",
+                  "Practiced DOM manipulation, event handling, and form validation",
+                ]}
+              />
+
+              <ExperienceItem
                 title="Frontend Developer"
-                company="xyz"
-                period="1233"
-                description="Led the development of responsive web applications using React, Next.js, and TypeScript. Implemented state management with Redux and Context API. Collaborated with UX/UI designers to create intuitive user interfaces."
+                company="Wordle Clone, Currency Converter & World Atlas"
+                period="2024"
+                description="Developed interactive frontend projects that strengthened core JavaScript, React, and API handling skills. These projects emphasized real-world UI, logic building, and user interaction."
                 achievements={[
-                  "Reduced page load time by 40% through code optimization and lazy loading",
-                  "Implemented CI/CD pipeline that decreased deployment time by 60%",
-                  "Mentored junior developers and conducted code reviews",
+                  "Built a Wordle clone with React using state management and custom keyboard UI",
+                  "Developed a currency converter using live API data and JavaScript",
+                  "Created World Atlas app with REST API to explore countries, flags, population, and more",
                 ]}
               />
 
               <ExperienceItem
-                title="Web Developer"
-                company="Digital Creations"
-                period="2018 - 2021"
-                description="Developed and maintained client websites using JavaScript, HTML, and CSS. Created responsive designs and implemented animations using GSAP and CSS transitions."
+                title="Student Developer"
+                company="PW Institute of Innovation"
+                period="2022 - Present"
+                description="Learning core Computer Science with real-world application in C, Java, Git, and Web Development. Participated in Java-based projects, problem-solving, and smart web ideas."
                 achievements={[
-                  "Built 20+ client websites with modern UI/UX principles",
-                  "Integrated payment gateways and third-party APIs",
-                  "Optimized websites for SEO and accessibility",
+                  "Built a Guesser Game in Java using OOP concepts taught by Jabi Sir",
+                  "Solved 100+ coding problems on CodeChef, HackerRank, and Codeforces",
+                  "Learning MERN stack, DevOps basics, and integrated blockchain concepts into learning app",
                 ]}
               />
 
-              <ExperienceItem
-                title="Frontend Intern"
-                company="WebSphere Inc."
-                period="2017 - 2018"
-                description="Assisted in the development of web applications. Learned modern frontend technologies and best practices."
-                achievements={[
-                  "Contributed to the company's design system",
-                  "Developed reusable UI components",
-                  "Participated in agile development processes",
-                ]}
-              />
             </div>
           </ResumeSection>
 
@@ -168,7 +175,7 @@ export default function ResumePage() {
               <EducationItem
                 degree="Bachelor of Technology in Computer Science"
                 institution="PW Institute of Inovation"
-                period="2014 - 2018"
+                period="2024 - 2028"
                 description="Focused on web development, algorithms, and data structures. Participated in coding competitions and hackathons."
                 courses={[
                   "Data Structures and Algorithms",
@@ -180,10 +187,10 @@ export default function ResumePage() {
 
               <EducationItem
                 degree="High School Diploma"
-                institution="Delhi Public School"
+                institution="Nehru Balodyan School"
                 period="20222 - 2023"
                 description="Specialized in Computer Science and Mathematics."
-                courses={["Computer Science", "Mathematics", "Physics", "English"]}
+                courses={["Computer Science", "Mathematics", "Physics", "English,Chemestry"]}
               />
             </div>
           </ResumeSection>
@@ -214,7 +221,7 @@ export default function ResumePage() {
                 skills={[
                   { name: "Node.js", level: 20 },
                   { name: "Express.js", level: 0 },
-                  { name: "MongoDB", level: 20 },
+                  { name: "MongoDB", level: 50 },
                   { name: "REST APIs", level: 0 },
                   { name: "GraphQL", level: 0 },
                 ]}
@@ -253,31 +260,25 @@ export default function ResumePage() {
             color="var(--neon-pink)"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <CertificationItem
-                title="Advanced React and Redux"
-                issuer="Udemy"
-                date="2020"
-                credentialId="UC-1234567890"
-              />
-
-              <CertificationItem
-                title="Full Stack Web Development"
-                issuer="freeCodeCamp"
-                date="2019"
-                credentialId="FCC-123456"
-              />
 
               <CertificationItem
                 title="JavaScript Algorithms and Data Structures"
-                issuer="freeCodeCamp"
-                date="2018"
+                issuer="PW Institute Of Inovation"
+                date="present - 2025"
                 credentialId="FCC-654321"
               />
 
               <CertificationItem
+                title="Advanced React and Redux"
+                issuer="Udemy"
+                date="2025"
+                credentialId="UCC-1234567890"
+              />
+
+              <CertificationItem
                 title="Responsive Web Design"
-                issuer="freeCodeCamp"
-                date="2017"
+                issuer="ChaiAurcode"
+                date="2025"
                 credentialId="FCC-789012"
               />
             </div>
@@ -406,7 +407,7 @@ function EducationItem({ degree, institution, period, description, courses }: Ed
 }
 
 // Skill Category Component
-function SkillCategory({ title, skills }) {
+function SkillCategory({ title, skills }: { title: string; skills: { name: string; level: number }[] }) {
   return (
     <div className="bg-darker/30 backdrop-blur-sm rounded-lg p-4 border border-white/5">
       <h3 className="text-lg font-bold text-white mb-4">{title}</h3>
@@ -435,7 +436,7 @@ function SkillCategory({ title, skills }) {
 }
 
 // Certification Item Component
-function CertificationItem({ title, issuer, date, credentialId }) {
+function CertificationItem({ title, issuer, date, credentialId }: { title: string; issuer: string; date: string; credentialId: string }) {
   return (
     <div className="bg-darker/30 backdrop-blur-sm rounded-lg p-4 border border-white/5">
       <h3 className="text-lg font-bold text-white">{title}</h3>

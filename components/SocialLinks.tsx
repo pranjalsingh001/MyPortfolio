@@ -7,16 +7,16 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/pranjalsingh001", color: "var(--neon-blue)" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/pranjal-singh-0b3799315", 
   color: "var(--neon-purple)" },
-  { icon: Twitter, href: "#", color: "var(--neon-pink)" },
+  { icon: Twitter, href: "https://x.com/Pranjal19446881", color: "var(--neon-pink)" },
 ]
 
-export default function SocialLinks() {
+export default function SocialLinks({ layout ='vertical'}) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.7, duration: 0.5 }}
-      className="fixed bottom-8 left-8 z-50 flex flex-col space-y-4"
+      transition={{ delay: 0.3, duration: 0.2 }}
+      className={`flex ${layout === "vertical" ? "flex-col space-y-4" : "flex-row space-x-4"}`}
     >
       {socialLinks.map((link, index) => (
         <motion.a
@@ -34,7 +34,7 @@ export default function SocialLinks() {
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 + index * 0.1 }}
+          transition={{ delay: index * 0.1 }}
         >
           <link.icon className="w-5 h-5" />
         </motion.a>

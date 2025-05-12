@@ -6,9 +6,10 @@ import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
 import { Input } from '@/components/ui/input'
-import {Button} from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import { Textarea } from "@/components/ui/textarea"
-import { useToast,toast } from "@/hooks/use-toast"
+import { useToast, toast } from "@/hooks/use-toast"
+import SocialLinks from "@/components/SocialLinks";
 export default function ContactPage() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({
@@ -142,6 +143,8 @@ export default function ContactPage() {
                   )}
                 </Button>
               </form>
+
+
             </div>
 
             {/* Border glow effect */}
@@ -175,7 +178,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-white">Email</h3>
-                      <p className="text-white/70">pranjal@example.com</p>
+                      <p className="text-white/70">pjlv1007@gmail.com</p>
                     </div>
                   </div>
 
@@ -185,7 +188,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-white">Phone</h3>
-                      <p className="text-white/70">+91 98765 43210</p>
+                      <p className="text-white/70">+91 9140931990</p>
                     </div>
                   </div>
 
@@ -195,9 +198,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-white">Location</h3>
-                      <p className="text-white/70">New Delhi, India</p>
+                      <p className="text-white/70">Bengaluru, India</p>
                     </div>
                   </div>
+
+                 
                 </div>
               </div>
 
@@ -221,7 +226,9 @@ export default function ContactPage() {
                   Follow me on social media to stay updated with my latest projects and tech insights. I'm always open
                   to new opportunities and collaborations.
                 </p>
-                <p className="text-white/70">Looking forward to working with you on your next exciting project!</p>
+
+                 {/* Social Links */}
+                <SocialLinks layout="horizontal" />
               </div>
 
               {/* Border glow effect */}
@@ -232,6 +239,7 @@ export default function ContactPage() {
                   border: "1px solid rgba(0, 255, 157, 0.1)",
                 }}
               />
+
             </div>
           </motion.div>
         </div>
