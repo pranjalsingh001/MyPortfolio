@@ -8,9 +8,7 @@ import { Send, Mail, Phone, MapPin } from "lucide-react"
 import { Input } from '@/components/ui/input'
 import {Button} from '@/components/ui/button'
 import { Textarea } from "@/components/ui/textarea"
-
-
-import { useToast } from "@/hooks/use-toast"
+import { useToast,toast } from "@/hooks/use-toast"
 export default function ContactPage() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({

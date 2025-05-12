@@ -55,16 +55,10 @@ export default function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0) // -1 for left, 1 for right
   const [isFlipping, setIsFlipping] = useState(false)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
 
   useEffect(() => {
-    // Create audio element for page flip sound
-    audioRef.current = new Audio("/page-flip.mp3") // This is a placeholder, you'd need to add this sound file
-    audioRef.current.volume = 0.5
-
-    // Add keyboard navigation
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
         goToNextProject()
@@ -76,10 +70,6 @@ export default function ProjectsPage() {
     window.addEventListener("keydown", handleKeyDown)
 
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current = null
-      }
       window.removeEventListener("keydown", handleKeyDown)
     }
   }, [])
@@ -90,19 +80,10 @@ export default function ProjectsPage() {
     setIsFlipping(true)
     setDirection(index > currentIndex ? 1 : -1)
 
-    // Play sound
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0
-      audioRef.current.play().catch(() => {
-        // Handle autoplay restrictions
-        console.log("Audio playback was prevented")
-      })
-    }
-
     setTimeout(() => {
       setCurrentIndex(index)
       setIsFlipping(false)
-    }, 500) // Match this with animation duration
+    }, 100)
   }
 
   const goToNextProject = () => {

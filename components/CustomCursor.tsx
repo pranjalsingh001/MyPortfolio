@@ -28,8 +28,8 @@ export default function CustomCursor() {
           gsap.to(cursorRef.current, {
             x: 0,
             y: 0,
-            left: e.clientX,
-            top: e.clientY,
+            left: e.clientX + window.scrollX, // Add scrollX
+            top: e.clientY + window.scrollY, // Add scrollY
             duration: 0.1,
             ease: "power2.out",
           })
@@ -40,8 +40,8 @@ export default function CustomCursor() {
           gsap.to(cursorRingRef.current, {
             x: 0,
             y: 0,
-            left: e.clientX,
-            top: e.clientY,
+            left: e.clientX + window.scrollX, // Add scrollX
+            top: e.clientY + window.scrollY, // Add scrollY
             duration: 0.3,
             ease: "power2.out",
           })
@@ -49,7 +49,7 @@ export default function CustomCursor() {
 
         // Create trail effect
         if (trailsContainerRef.current && Math.random() > 0.6) {
-          createTrail(e.clientX, e.clientY)
+          createTrail(e.clientX + window.scrollX, e.clientY + window.scrollY) // Add scroll offsets
         }
       }
 
