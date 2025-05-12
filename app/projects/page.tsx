@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+  import { useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, ArrowLeft, ArrowRightCircle, ArrowLeftCircle, ExternalLink } from "lucide-react"
 import SkillsMarquee from "@/components/SkillsMarquee"
@@ -49,12 +50,14 @@ const projects = [
   },
 ]
 
+
 export default function ProjectsPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0) // -1 for left, 1 for right
   const [isFlipping, setIsFlipping] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   useEffect(() => {
     // Create audio element for page flip sound
@@ -142,11 +145,10 @@ export default function ProjectsPage() {
                 <button
                   key={index}
                   onClick={() => goToProject(index)}
-                  className={`w-full text-left py-3 px-4 rounded-lg transition-all duration-300 flex items-center ${
-                    currentIndex === index
+                  className={`w-full text-left py-3 px-4 rounded-lg transition-all duration-300 flex items-center ${currentIndex === index
                       ? "bg-darker border-l-4"
                       : "bg-darker/60 border-l-4 border-transparent hover:border-white/30"
-                  }`}
+                    }`}
                   style={{
                     borderLeftColor: currentIndex === index ? project.color : "",
                     boxShadow: currentIndex === index ? `0 0 15px ${project.color}30` : "",
@@ -272,7 +274,7 @@ export default function ProjectsPage() {
                         }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="px-6 py-3 rounded-lg bg-gradient-to-r from-darker to-darker border border-white/10 text-white flex items-center gap-2 transition-all duration-200 inline-flex"
+                        className="px-6 py-3 rounded-lg bg-gradient-to-r from-darker to-darker border border-white/10 text-white flex items-center gap-2 transition-all duration-200"
                         style={{
                           borderColor: `${projects[currentIndex].color}50`,
                         }}
@@ -332,9 +334,8 @@ export default function ProjectsPage() {
                 <button
                   key={index}
                   onClick={() => goToProject(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentIndex === index ? "bg-white scale-125" : "bg-white/30"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index ? "bg-white scale-125" : "bg-white/30"
+                    }`}
                   style={{
                     backgroundColor: currentIndex === index ? project.color : "",
                     boxShadow: currentIndex === index ? `0 0 8px ${project.color}` : "",
@@ -346,6 +347,19 @@ export default function ProjectsPage() {
 
             {/* Keyboard instructions */}
             <div className="mt-4 text-center text-white/50 text-sm">Use arrow keys or swipe to navigate projects</div>
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(176, 38, 255, 0.5)",
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              className="px-6 py-3 border-2 border-neon-purple text-white rounded-lg font-medium flex items-center gap-2 transition-all duration-200"
+              onClick={() => router.push("/skills")}
+            >
+              Explore Skills <ArrowRight className="ml-1" />
+            </motion.button>
+
           </div>
         </div>
       </div>
