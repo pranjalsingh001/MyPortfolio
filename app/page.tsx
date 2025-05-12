@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Only show these components on homepage */}
-      <SocialLinks />
+      <SocialLinks layout="vertical" />
       <HomeNavBar />
 
       {/* Main content */}

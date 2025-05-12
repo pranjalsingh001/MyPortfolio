@@ -40,7 +40,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-blue via-neon-purple to-neon-pink rounded-xl p-1">
                     <div className="w-full h-full bg-darker rounded-lg overflow-hidden">
                       <img
-                        src="/placeholder.svg?height=600&width=400"
+                        src="/myImg2.jpg"
                         alt="Pranjal Singh"
                         className="w-full h-full object-cover"
                       />
@@ -66,13 +66,12 @@ export default function AboutPage() {
                   </div>
 
                   <p className="text-white/90 mb-6">
-                    Yo, I'm Pranjal Singh—someone who loves making the web feel alive. I don't just build websites; I
-                    craft <span className="text-neon-pink font-medium">experiences</span>. Whether it's animations that
-                    hit different, interactive <span className="text-neon-purple font-medium">designs</span> that pull
-                    you in, or futuristic effects that make people go 'whoa'—I'm all about pushing the limits of what's{" "}
-                    <span className="text-neon-blue font-medium">possible</span>.
+                    Hey! I'm Pranjal Singh — a curious builder who loves turning ideas into real, interactive web <span className="text-neon-pink font-medium">magic</span>. I don’t just create pages; I bring them to life with smooth <span className="text-neon-purple font-medium">logic</span> and a touch of <span className="text-neon-blue font-medium">imagination</span>. Whether it's layouts that feel just right, effects that respond like they’re thinking, or flows that guide you without confusion — I’m always exploring new ways to make the web more <span className="text-neon-pink font-medium">alive</span>, more <span className="text-neon-purple font-medium">human</span>, and way more <span className="text-neon-blue font-medium">fun</span>.
                   </p>
 
+                  <p className="text-white/90">
+                    I’m all about that perfect blend of <span className="text-neon-pink font-medium">design</span> and <span className="text-neon-blue font-medium">code</span>, where every pixel has a purpose and every interaction tells a <span className="text-neon-purple font-medium">story</span>. I’m on a mission to make the web not just functional, but also a place where users feel at <span className="text-neon-pink font-medium">home</span>.
+                  </p><br />
                   <div className="mb-8">
                     <h2 className="text-xl font-orbitron font-bold mb-4">🎓 Currently:</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -94,7 +93,7 @@ export default function AboutPage() {
                       >
                         <div className="flex items-start gap-3">
                           <div className="text-neon-purple text-xl">💡</div>
-                          <div>Solving problems on Codeforces & sharpening my logic.</div>
+                          <div>Solving problems on Codeforces , leetcode & GFG , sharpening my logic.</div>
                         </div>
                       </motion.div>
 
@@ -105,7 +104,7 @@ export default function AboutPage() {
                       >
                         <div className="flex items-start gap-3">
                           <div className="text-neon-pink text-xl">🎨</div>
-                          <div>Leveling up in advanced CSS animations for smooth, next-level UI.</div>
+                          <div>Leveling up in advanced frontend frameworks, next-level UI.</div>
                         </div>
                       </motion.div>
 
@@ -116,7 +115,7 @@ export default function AboutPage() {
                       >
                         <div className="flex items-start gap-3">
                           <div className="text-neon-green text-xl">🔧</div>
-                          <div>Experimenting with interactive web elements & futuristic designs.</div>
+                          <div>Experimenting with Blockchain elements & Smart contracts.</div>
                         </div>
                       </motion.div>
                     </div>
