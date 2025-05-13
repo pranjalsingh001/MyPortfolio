@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/Header"
 import InteractiveBackground from "@/components/InteractiveBackground"
 import CustomCursor from "@/components/CustomCursor"
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const orbitron = Orbitron({
@@ -38,7 +39,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
           <CustomCursor />
 
           {/* Main content */}
-          <main className="relative z-10">{children}</main>
+          <main className="relative z-10">{children} <Analytics /></main>
         </ThemeProvider>
       </body>
     </html>
